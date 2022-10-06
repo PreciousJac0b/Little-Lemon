@@ -1,20 +1,20 @@
 import React from 'react';
 import classes from './EachMeal.module.css';
 
-const EachMeal = () => {
+const EachMeal = (props) => {
   return (
     <>
-    <div className={classes.top}></div>
-    <div className={classes['each-meal']}>
-        <div>
-            <h2>Rice Dream Original Non-Dairy Beverage Organic</h2>
-            <p>Rice Dream Organic Original Enriched Rice Drink.</p>
-            <p>Bakery</p>
+    {/* <div className={classes.top}></div> */}
+    <div key={props.id} className={classes['each-meal']}>
+        <div className={classes.left}>
+            <h2>{props.title}</h2>
+            <p className={classes.desc}>{props.description}</p>
+            <p>{props.category}</p>
         </div>
-        <div>
-            <p>$5.77</p>
-            <p>Size</p>
-            <button>add +</button>
+        <div className={classes.right}>
+            <p className={classes.price}>${props.price}</p>
+            <p className={classes.size}>{props.size}</p>
+            <button className={classes['cart-item-btn']}>add +</button>
         </div>
     </div>
     </>
