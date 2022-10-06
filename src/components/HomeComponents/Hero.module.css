@@ -1,0 +1,69 @@
+.top {
+    background: url(../../assets/lemons.jpg) no-repeat center/cover;
+    margin: 6rem 5%;
+    margin-bottom: 1rem;
+    padding: 2rem 0;
+    border-radius: 0.8rem;
+}
+
+.top h2 {
+    color: #fff;
+    font-family: 'Nunito Sans';
+    font-size: 24px;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.top p {
+    color: #fff;
+    font-family: 'Open Sans';
+    padding: 0 1rem;
+}
+
+.bottom {
+    margin: 1rem 5%;
+}
+
+.bottom img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.bottom article {
+    padding: 1rem;
+    background-color: rgb(245, 202, 145);
+    margin: 1rem 0;
+}
+
+.bottom h2 {
+    font-family: 'Nunito Sans';
+    padding: 0.5rem 0;
+}
+
+.bottom p {
+    font-family: 'Open Sans';
+    padding: 1rem 0;
+}
+
+.btn-pack {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.more-btn {
+    background-color: #722F37;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+@media (min-width: 35em) {
+    .bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}

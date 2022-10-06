@@ -1,0 +1,127 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #2f2d2d;
+  height: 5rem;
+  padding: 0 3rem;
+  z-index: 10;
+}
+
+.header h2 {
+  color: white;
+  font-family: "Nunito Sans";
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0 1.5rem;
+}
+
+li a {
+  text-decoration: none;
+  font-family: "Open Sans";
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.backdropped {
+  display: none;
+}
+
+.cart-btn {
+  background-color: #722F37;
+  padding: 0.4rem 2rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.cart-btn span {
+  background-color: #AE3D57;
+  padding: 0.2rem 0.4rem;
+  font-size: 14px;
+  border-radius: 50%;
+  margin-left: 0.7rem;
+}
+
+@media (max-width: 35em) {
+  .header {
+    padding: 0 1rem;
+    height: 5rem;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    background: transparent;
+    background-image: url(../assets/mobile-menu/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    z-index: 20;
+  }
+  .hamburger[background-set="true"] {
+    background-image: url(../assets/mobile-menu/icon-close.svg);
+  }
+
+  .backdropped {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  ul {
+    position: fixed;
+    inset: 0 0 0 40%;
+    flex-direction: column;
+    padding: min(20rem, 30vh) 2rem;
+    margin: 0;
+    z-index: 10;
+    background: hsl(231 77% 90%/ 0.1);
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+    -webkit-backdrop-filter: blur(0.05);
+    backdrop-filter: blur(1.5rem);
+  }
+
+  ul[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  ul > li {
+    margin: 2rem auto;
+  }
+}
