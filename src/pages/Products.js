@@ -1,6 +1,7 @@
 import React, { useReducer, useContext } from "react";
 import { MealContext } from "../store/meal-context";
 import EachMeal from "../components/EachMeal";
+import classes from './Products.module.css';
 
 const reducer = (state, action) => {
   if (action.type === "fill") {
@@ -13,7 +14,7 @@ const reducer = (state, action) => {
 
 const Products = () => {
   const initialState = { money: 1000, food: 2000 };
-  const { meals, setMeals } = useContext(MealContext);
+  const { meals, setMeals, setCartContents } = useContext(MealContext);
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const cut = () => {
@@ -28,9 +29,14 @@ const Products = () => {
     dispatch({ type: "fill" });
   };
 
+  const addToCart = () => {
+    setCartContents((prevCartContents) => {
+      return {cartNumber: prevCartContents.cartNumber += 1, ...prevCartContents}
+    })
+  };
   return (
     <>
-      <div>Products</div>
+      <div className={classes.header}>Products</div>
       {meals.map((elem) => (
         <EachMeal
           key={elem.id}
@@ -39,6 +45,7 @@ const Products = () => {
           category={elem.category}
           price={elem.price}
           size={elem.size}
+          onClick={addToCart}
         />
       ))}
       <button onClick={cut}>Cut</button>

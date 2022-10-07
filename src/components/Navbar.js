@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from './Navbar.module.css';
 import { Link } from "react-router-dom";
+import { MealContext } from "../store/meal-context";
 
 const Navbar = () => {
+  const {cartContents, setCartContents} = useContext(MealContext);
     const clicked = () => {
         const navbarUl = document.querySelector("#navbar");
         const navbarUlValue = navbarUl.getAttribute("data-visible");
@@ -52,7 +54,7 @@ const Navbar = () => {
             <li>
               <button className={classes['cart-btn']}>
                 Cart
-                <span>3</span></button>
+                <span>{cartContents.cartNumber}</span></button>
             </li>
           </ul>
         </nav>

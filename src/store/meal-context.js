@@ -217,7 +217,7 @@ const MealData = [
     brand: "Gaston’s Bakery",
     expDate: "05/18/2017",
     mfdDate: "05/13/2017",
-    size: "32 pieces",
+    size: "32 pcs",
     price: 39.95,
     stock: "2",
     images: ["/public/images/gastons-bakery-small-puff-pastry-squares.jpg"],
@@ -229,13 +229,21 @@ const MealData = [
   },
 ];
 
+
+const cartContent = {
+  cartItems: [],
+  cartNumber: 1,
+  cartOpen: false,
+}
+
 export const MealContext = React.createContext();
 
 const MealProvider = ({ children }) => {
   const [meals, setMeals] = useState(MealData);
+  const [cartContents, setCartContents] = useState(cartContent);
 
   return (
-    <MealContext.Provider value={{ meals, setMeals }}>
+    <MealContext.Provider value={{ meals, setMeals, cartContents, setCartContents }}>
       {children}
     </MealContext.Provider>
   );

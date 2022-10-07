@@ -14,7 +14,7 @@ const EachMeal = (props) => {
         <div className={classes.right}>
             <p className={classes.price}>${props.price}</p>
             <p className={classes.size}>{props.size}</p>
-            <button className={classes['cart-item-btn']}>add +</button>
+            <button className={classes['cart-item-btn']} onClick={props.onClick}>add +</button>
         </div>
     </div>
     </>

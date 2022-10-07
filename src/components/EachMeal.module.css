@@ -31,6 +31,16 @@
 
 .desc {
     padding-bottom: 0.5rem;
+    width: 50rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.desc:hover {
+    white-space: normal;
+    overflow: visible;
 }
 
 .right {
