@@ -18,3 +18,25 @@
     margin: 1rem 0;
     text-align: justify;
 }
+
+.info h4 {
+    font-family: 'Open Sans';
+    font-size: 20px;
+}
+
+.commitment li {
+    margin: 1rem 0;
+    font-family: 'Open Sans';
+    font-size: 20px;
+}
+
+
+@media (max-width: 35em) {
+    .info {
+        line-height: 1;
+    }
+
+    .info p {
+        text-align: start;
+    }
+}

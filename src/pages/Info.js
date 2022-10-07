@@ -46,6 +46,23 @@ const Info = () => {
             Gather great minds to build a world class team of passionate result driven individuals to provite the utmost customer experience.
           </p>
         </article>
+        <article className={classes['core-values']}>
+          <h2>Core Values</h2>
+          <h4>Sincerity.</h4>
+          <p>Be passionate, produce result, take ownership</p>
+          <h4>Satisfy and Enable.</h4>
+          <p>We satisfy and enable our customers to win</p>
+          <h4>Top-Notch.</h4>
+          <p>We provide the best quality in the entire city.</p>
+        </article>
+        <article className={classes.commitment}>
+          <h2>Our Commitment</h2>
+          <ul>
+            <li><p>We are the trusted partner to take a proactive approach towards your satisfaction</p></li>
+            <li><p>We are the fellow small business that understands your day-to-day needs.</p></li>
+            <li><p>We are the consumer system that is always there when you need us.</p></li>
+          </ul>
+        </article>
       </section>
     </>
   );

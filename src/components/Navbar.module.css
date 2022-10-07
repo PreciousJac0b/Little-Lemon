@@ -103,7 +103,7 @@ li a {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  ul {
+  nav ul {
     position: fixed;
     inset: 0 0 0 40%;
     flex-direction: column;
